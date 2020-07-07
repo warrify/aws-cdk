@@ -192,6 +192,8 @@ export class LayerVersion extends LayerVersionBase {
       licenseInfo: props.license,
     });
 
+    resource.enableWeakReference();
+
     props.code.bindToResource(resource, {
       resourceProperty: 'Content',
     });
